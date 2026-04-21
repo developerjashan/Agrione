@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AGRIONE is an AI-powered precision agriculture platform combining crop disease detection, drone spraying, and mission control analytics.">
+  <title>AGRIONE | Precision Agriculture, Powered by AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-core">
+      <div class="loader-ring"></div>
+      <div class="loader-ring loader-ring-delay"></div>
+      <span>Booting AGRIONE Mission Interface</span>
+    </div>
+  </div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="AGRIONE home">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <strong>AGRIONE</strong>
+          <small>AI Precision Agriculture</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#technology">Technology</a>
+        <a href="#mission-control">Mission Control</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">Book a Slot</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <div class="eyebrow-row">
+            <span class="eyebrow">Autonomous Agro Mission Stack</span>
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              Live Precision Mode
+            </span>
+          </div>
+
+          <h1>Precision Agriculture, Powered by AI</h1>
+          <p class="lead">
+            AGRIONE merges computer vision, disease detection, robotics, and drone-based spraying into a single operational platform that finds crop stress early and treats only what needs attention.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Request Demo</a>
+            <a class="button button-secondary" href="#technology">Explore Technology</a>
+          </div>
+
+          <div class="hero-signals">
+            <article class="signal-card tilt-card">
+              <span>AI Layer</span>
+              <strong>Plant-Level Detection</strong>
+              <p>Computer vision flags disease signatures before blanket spraying begins.</p>
+            </article>
+            <article class="signal-card tilt-card">
+              <span>Control Layer</span>
+              <strong>Drone + Gimbal Response</strong>
+              <p>Targeted actuation routes spray only to infected plants and high-risk zones.</p>
+            </article>
+            <article class="signal-card tilt-card">
+              <span>Outcome Layer</span>
+              <strong>Lower Waste, Higher Yield</strong>
+              <p>Fewer unnecessary inputs, stronger crop protection, and cleaner field operations.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal tilt-card">
+          <div class="mission-window">
+            <div class="window-bar">
+              <span class="window-label">Mission Feed / Sector 07</span>
+              <div class="window-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="field-display">
+              <div class="field-labels">
+                <span>RGB + Multispectral Composite</span>
+                <span>Swarm Sync Enabled</span>
+              </div>
+
+              <div class="field-grid"></div>
+              <div class="scan-line"></div>
+              <div class="target-box target-box-a">
+                <span>Leaf Rust Probability 0.92</span>
+              </div>
+              <div class="target-box target-box-b">
+                <span>Stress Cluster 0.77</span>
+              </div>
+              <div class="field-coordinates">24.55N / 73.68E</div>
+
+              <div class="drone-wrapper">
+                <svg class="drone-svg" viewBox="0 0 340 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M72 75H268" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M170 36V114" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="58" cy="42" r="20" stroke="currentColor" stroke-width="4"/>
+                  <circle cx="282" cy="42" r="20" stroke="currentColor" stroke-width="4"/>
+                  <circle cx="58" cy="108" r="20" stroke="currentColor" stroke-width="4"/>
+                  <circle cx="282" cy="108" r="20" stroke="currentColor" stroke-width="4"/>
+                  <rect x="138" y="56" width="64" height="38" rx="10" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="3"/>
+                  <path d="M155 103C155 103 151 122 143 128" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M185 103C185 103 189 122 197 128" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M148 128H194" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M170 94V121" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="mission-metrics">
+              <article>
+                <span>Targets Locked</span>
+                <strong data-live-target>12 Plants</strong>
+              </article>
+              <article>
+                <span>Spray Mode</span>
+                <strong>Adaptive Pulse</strong>
+              </article>
+              <article>
+                <span>Weather Sync</span>
+                <strong data-live-wind>3.2 m/s Wind</strong>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="about">
+        <div class="section-heading reveal">
+          <span class="eyebrow">About AGRIONE</span>
+          <h2>Built for farms that need surgical precision, not broad-spectrum guesswork.</h2>
+          <p>
+            Traditional spraying blankets entire fields, even when problems start at the leaf or row level. AGRIONE replaces that waste with a data-driven system that sees earlier, decides faster, and applies only where action is needed.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="story-card reveal tilt-card">
+            <span class="card-kicker">The Problem</span>
+            <h3>Overuse of pesticides and inefficient field response are eroding margins.</h3>
+            <p>
+              Farmers often react with full-field treatment because the exact location and severity of crop stress are hard to identify in real time. That means more chemical use, higher cost, and less sustainable operations.
+            </p>
+            <ul class="card-list">
+              <li>Blanket spraying wastes input and labor.</li>
+              <li>Late detection allows disease to spread before intervention.</li>
+              <li>Manual scouting misses hidden patterns across large acreage.</li>
+            </ul>
+          </article>
+
+          <article class="story-card reveal tilt-card">
+            <span class="card-kicker">The Solution</span>
+            <h3>AGRIONE connects AI detection to autonomous drone action in one loop.</h3>
+            <p>
+              Imaging, models, and robotic actuation work together as a closed feedback system. The platform detects anomalies, identifies target plants, aligns the gimbal path, and executes precision spray with mission-level visibility.
+            </p>
+            <ul class="card-list">
+              <li>AI identifies disease signatures and stress hotspots.</li>
+              <li>Drone and gimbal systems align to precise coordinates.</li>
+              <li>Mission telemetry keeps operators informed and in control.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="technology">
+        <div class="section-heading reveal">
+          <span class="eyebrow">How It Works</span>
+          <h2>An end-to-end precision workflow from image capture to targeted spray.</h2>
+          <p>
+            AGRIONE continuously processes field imagery, recognizes actionable plant-level issues, then translates that intelligence into controlled spray execution with geospatial context and operator oversight.
+          </p>
+        </div>
+
+        <div class="process-track">
+          <article class="process-step reveal">
+            <span class="step-index">01</span>
+            <span class="step-badge">CAM</span>
+            <h3>Camera Capture</h3>
+            <p>RGB and multispectral imagery collect canopy detail across rows, blocks, and stress zones.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-index">02</span>
+            <span class="step-badge">AI</span>
+            <h3>AI Detection</h3>
+            <p>Models inspect the live feed for disease signatures, nutrient stress, and anomaly patterns.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-index">03</span>
+            <span class="step-badge">ID</span>
+            <h3>Target Identification</h3>
+            <p>The system isolates affected plants and calculates treatment priority by location and severity.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-index">04</span>
+            <span class="step-badge">NAV</span>
+            <h3>Gimbal + Drone Alignment</h3>
+            <p>Flight controls and gimbal orientation reposition the spray system over exact treatment points.</p>
+          </article>
+
+          <article class="process-step reveal">
+            <span class="step-index">05</span>
+            <span class="step-badge">SPRAY</span>
+            <h3>Precision Spray</h3>
+            <p>Targeted pesticide application is delivered only where action is required, plant by plant.</p>
+          </article>
+        </div>
+
+        <div class="logic-strip reveal">
+          <span>Camera</span>
+          <i></i>
+          <span>AI Detection</span>
+          <i></i>
+          <span>Target Lock</span>
+          <i></i>
+          <span>Drone Response</span>
+          <i></i>
+          <span>Precision Spray</span>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="features">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Core Features</span>
+          <h2>Everything the operator needs to run a smarter agricultural mission.</h2>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card reveal tilt-card">
+            <span class="feature-chip">01</span>
+            <h3>AI Crop Disease Detection</h3>
+            <p>Early-stage disease recognition from visual patterns and crop health anomalies before they escalate.</p>
+          </article>
+
+          <article class="feature-card reveal tilt-card">
+            <span class="feature-chip">02</span>
+            <h3>Plant-Level Precision Spraying</h3>
+            <p>Micro-target treatment logic helps avoid unnecessary blanket coverage and reduces chemical overspray.</p>
+          </article>
+
+          <article class="feature-card reveal tilt-card">
+            <span class="feature-chip">03</span>
+            <h3>Drone Integration</h3>
+            <p>Autonomous or assisted mission execution with aerial mobility for fast, repeatable field operations.</p>
+          </article>
+
+          <article class="feature-card reveal tilt-card">
+            <span class="feature-chip">04</span>
+            <h3>Real-Time Monitoring Dashboard</h3>
+            <p>Live views, telemetry, health markers, and mission state give operators a control-tower perspective.</p>
+          </article>
+
+          <article class="feature-card reveal tilt-card">
+            <span class="feature-chip">05</span>
+            <h3>GPS + Weather Integration</h3>
+            <p>Environmental signals improve route planning, spray timing, and application accuracy in the field.</p>
+          </article>
+
+          <article class="feature-card reveal tilt-card">
+            <span class="feature-chip">06</span>
+            <h3>Reduced Chemical Usage</h3>
+            <p>AGRIONE is engineered to cut waste at the decision layer, not just at the nozzle.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="mission-control">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Live Mission Control UI</span>
+          <h2>A dashboard experience that feels operational, not ornamental.</h2>
+          <p>
+            This concept interface shows how AGRIONE can surface camera intelligence, target tracking, environment data, and spray controls inside a single mission control environment.
+          </p>
+        </div>
+
+        <div class="dashboard reveal">
+          <div class="dashboard-panel camera-panel">
+            <div class="panel-header">
+              <span>Camera Feed</span>
+              <span class="panel-meta">Mode: Autonomous Scan</span>
+            </div>
+            <div class="camera-feed">
+              <div class="camera-overlay">
+                <div class="feed-tag">Thermal + RGB</div>
+                <div class="tracking-box tracking-box-main">
+                  <span>Target 11</span>
+                </div>
+                <div class="tracking-box tracking-box-secondary">
+                  <span>Target 12</span>
+                </div>
+                <div class="crosshair"></div>
+                <div class="camera-scan"></div>
+                <div class="camera-footer">
+                  <span>Latency 42ms</span>
+                  <span>Confidence 94%</span>
+                  <span>Tank 68%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-column">
+            <div class="dashboard-panel telemetry-panel">
+              <div class="panel-header">
+                <span>Mission Telemetry</span>
+                <span class="panel-meta">Synced</span>
+              </div>
+              <div class="telemetry-grid">
+                <article>
+                  <span>Altitude</span>
+                  <strong>4.8 m</strong>
+                </article>
+                <article>
+                  <span>Coverage Zone</span>
+                  <strong>Block C-12</strong>
+                </article>
+                <article>
+                  <span>Wind Drift</span>
+                  <strong data-live-drift>Low</strong>
+                </article>
+                <article>
+                  <span>Spray Pulse</span>
+                  <strong>Adaptive</strong>
+                </article>
+              </div>
+            </div>
+
+            <div class="dashboard-panel map-panel">
+              <div class="panel-header">
+                <span>Target Map</span>
+                <span class="panel-meta">GPS Linked</span>
+              </div>
+              <div class="map-grid">
+                <span class="map-node node-a"></span>
+                <span class="map-node node-b"></span>
+                <span class="map-node node-c"></span>
+                <span class="map-path map-path-a"></span>
+                <span class="map-path map-path-b"></span>
+                <span class="map-drone"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-panel controls-panel">
+            <div class="panel-header">
+              <span>Command Controls</span>
+              <span class="panel-meta">Operator Assist</span>
+            </div>
+            <div class="control-pills">
+              <button type="button" class="control-pill active">Auto Route</button>
+              <button type="button" class="control-pill">Target Lock</button>
+              <button type="button" class="control-pill">Spray Arm</button>
+              <button type="button" class="control-pill">Weather Gate</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="benefits">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Benefits</span>
+          <h2>Operational gains that matter on the field, in the budget, and for long-term sustainability.</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal tilt-card">
+            <strong class="benefit-value"><span data-counter="360">0</span><small>deg</small></strong>
+            <h3>Reduce Pesticide Usage</h3>
+            <p>Complete field visibility helps AGRIONE concentrate treatment where disease pressure is actually detected.</p>
+          </article>
+
+          <article class="benefit-card reveal tilt-card">
+            <strong class="benefit-value"><span data-counter="24">0</span><small>/7</small></strong>
+            <h3>Increase Yield</h3>
+            <p>Continuous monitoring makes it easier to catch crop stress earlier and protect healthy production zones.</p>
+          </article>
+
+          <article class="benefit-card reveal tilt-card">
+            <strong class="benefit-value"><span data-counter="1">0</span><small>plant</small></strong>
+            <h3>Save Cost</h3>
+            <p>Plant-by-plant application reduces unnecessary chemical use, extra passes, and manual scouting effort.</p>
+          </article>
+
+          <article class="benefit-card reveal tilt-card">
+            <strong class="benefit-value"><span data-counter="0">0</span><small>excess</small></strong>
+            <h3>Sustainable Farming</h3>
+            <p>AGRIONE is designed around lower-waste intervention instead of broad chemical-heavy blanket spraying.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="use-cases">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Use Cases</span>
+          <h2>Flexible enough for individual growers, scaled operations, and institutional programs.</h2>
+        </div>
+
+        <div class="use-cases-grid">
+          <article class="use-case-card reveal">
+            <span>01</span>
+            <h3>Small Farmers</h3>
+            <p>Bring enterprise-grade detection and targeted spraying to farms that need every input to count.</p>
+          </article>
+
+          <article class="use-case-card reveal">
+            <span>02</span>
+            <h3>Large Farms</h3>
+            <p>Coordinate surveillance and treatment across wide acreage with repeatable, data-backed operations.</p>
+          </article>
+
+          <article class="use-case-card reveal">
+            <span>03</span>
+            <h3>Agri-Tech Companies</h3>
+            <p>Embed AGRIONE into service stacks that need actionable field intelligence and autonomous response.</p>
+          </article>
+
+          <article class="use-case-card reveal">
+            <span>04</span>
+            <h3>Government Programs</h3>
+            <p>Support scalable crop monitoring, intervention planning, and sustainable input management initiatives.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="recognition">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Recognition</span>
+          <h2>Validated on national stages, university campuses, and agri-tech showcase floors.</h2>
+          <p>
+            AGRIONE has already built strong third-party credibility through competition wins, investor-facing selection rounds, and live presentations across technical institutions and agricultural expos.
+          </p>
+        </div>
+
+        <div class="recognition-shell">
+          <article class="dashboard-panel awards-visual reveal tilt-card">
+            <div class="panel-header">
+              <span>Awards Archive</span>
+              <span class="panel-meta">2025 - 2026</span>
+            </div>
+
+            <div class="awards-image-frame">
+              <img src="awards.png" alt="AGRIONE team awards, certificates, and competition recognitions">
+            </div>
+
+            <div class="awards-caption">
+              <span>Field Proof</span>
+              <strong>Real competition wins, campus validations, and public showcase momentum.</strong>
+            </div>
+          </article>
+
+          <div class="recognition-content reveal">
+            <div class="recognition-stats">
+              <article class="recognition-stat tilt-card">
+                <strong>12+</strong>
+                <span>Podium Finishes</span>
+                <p>Across named competitions plus 7-8 additional idea pitch wins on other platforms.</p>
+              </article>
+
+              <article class="recognition-stat tilt-card">
+                <strong>Top 2.4%</strong>
+                <span>National Validation</span>
+                <p>Ranked among the top performers at IIT Bombay Eureka, Asia's largest business model competition.</p>
+              </article>
+
+              <article class="recognition-stat tilt-card">
+                <strong>6</strong>
+                <span>Showcase Stops</span>
+                <p>Presented across universities and expos to academics, innovators, and agri-tech audiences.</p>
+              </article>
+            </div>
+
+            <div class="achievement-groups">
+              <article class="achievement-group tilt-card">
+                <span class="card-kicker">Competition Wins</span>
+                <ul class="achievement-list">
+                  <li>Secured 1st Position at IIT Roorkee for AGRIONE's innovative idea.</li>
+                  <li>Won 1st Position at GGNIMT Tech BIP 2026.</li>
+                  <li>Achieved 1st Runner-Up at GNA Hackathon 4.0.</li>
+                  <li>Secured 2nd Position (Theme-Based) at GNA Hackathon 3.0.</li>
+                  <li>Won 7-8 additional idea pitch competitions across various platforms.</li>
+                </ul>
+              </article>
+
+              <article class="achievement-group tilt-card">
+                <span class="card-kicker">National Recognition</span>
+                <ul class="achievement-list">
+                  <li>Ranked among the Top 2.4% at IIT Bombay Eureka, Asia's largest B-Model competition.</li>
+                  <li>Selected for the YUKTI Innovation Challenge 2026 second round, with results awaited.</li>
+                  <li>Recognized for innovation in AgriTech, Drone Technology, and AI-based solutions.</li>
+                </ul>
+              </article>
+
+              <article class="achievement-group tilt-card">
+                <span class="card-kicker">Academic And Expo Presence</span>
+                <ul class="achievement-list">
+                  <li>Presented at Sardar Beant Singh State University, Gurdaspur, IKGPTU Kapurthala, and Chandigarh University.</li>
+                  <li>Presented at Chandigarh Group of Colleges across the Jhanjeri and Landran campuses.</li>
+                  <li>Showcased at Krishi Mech Expo 2026, Chandigarh, and participated in Machma Expo 2025, Chandigarh.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt contact-section" id="contact">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Request Demo</span>
+          <h2>Bring AGRIONE into your next field mission.</h2>
+          <p>
+            Whether you are evaluating AGRIONE for investors, field pilots, or production deployment, we can walk you through the mission control stack, drone workflows, and precision application model.
+          </p>
+
+          <div class="contact-highlights">
+            <article>
+              <span>Deployment Focus</span>
+              <strong>Pilot to Enterprise</strong>
+            </article>
+            <article>
+              <span>Response Window</span>
+              <strong>Within 24 Hours</strong>
+            </article>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" aria-label="AGRIONE demo request form">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+
+          <label>
+            Work Email
+            <input type="email" name="email" placeholder="name@company.com" required>
+          </label>
+
+          <label>
+            Organization
+            <input type="text" name="organization" placeholder="Farm, company, or program">
+          </label>
+
+          <label>
+            Deployment Interest
+            <select name="interest">
+              <option value="pilot">Pilot Program</option>
+              <option value="enterprise">Enterprise Deployment</option>
+              <option value="partnership">Partnership</option>
+              <option value="investor">Investor Briefing</option>
+            </select>
+          </label>
+
+          <label class="full-span">
+            Tell Us About Your Mission
+            <textarea name="message" rows="5" placeholder="Share your crop type, operating scale, or demo goals."></textarea>
+          </label>
+
+          <button class="button button-primary full-span" type="submit">Transmit Demo Request</button>
+          <p class="form-status full-span" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>AGRIONE</p>
+      <span>Mission-ready precision agriculture for the next era of farming.</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
